@@ -1,0 +1,124 @@
+/* Esta parte e global para padronizar e corrigir os elementos */
+
+*
+{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:before,
+*:after
+{
+  box-sizing: inherit;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, svg, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video
+{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* Expandir o corpo de <html> e de <body> para 100% de ambas a altura e a largura */
+html,
+body
+{
+  /* altura */
+  height: 100%;
+  /* largura */
+  width: 100%;
+}
+
+/* Este é o elemento <body>. Nele, o corpo inteiro é pintado com a cor de branco antiquado e preenchido com 20 pixels  */
+body
+{
+  /* cor do fundo */
+  background-color: antiquewhite;
+  /* preenchimento */
+  padding: 20px;
+}
+
+body, button, input, select
+{
+  /* Tornar toda a tipografia, inclusive a de botões, campos de entrada e listas suspensas uma fonte sem serifada a fim de deixá-la bonita */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Qualquer parágrafo */
+p
+{
+  /* altura de linha */
+  line-height: 1.5em;
+  /* definir o preenchimento das margens inferior e superior externas*/
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.container
+{
+    background-color: rgba(255, 255, 255, 0.5);
+    /* definir o limite de largura de uma divisão */
+    max-width: 520px;
+}
+
+form
+{
+    background-color: rgba(255, 255, 255, 0.8);
+    /* tornar o formulário uma divisão para poder ser centralizado */
+    display: block;
+    /* definir a largura de um formulário */
+    max-width: 320px;
+}
+
+.container, form
+{
+  /* Tornar os cantos dos elementos (divisão de container e formulário) arredondados com 10 pixels */
+  border-radius: 10px;
+  /* Desde que a propriedade "display" dos elementos seja "block", podem ser centralizados */
+  margin: 0 auto;
+  /* preencher o espaço interno*/
+  padding: 20px;
+}
+
+/* Estilizar a aparência dos campos de entrada, das listas suspensas e das áreas de mensagem */
+input, select, textarea
+{
+  /* Estilizar a borda dos campos de entrada, das listas suspensas e das áreas de mensagem */
+  border: 1px solid burlywood;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+/* Rótulos */
+label
+{
+  /* Tornar em negrito */
+  font-weight: bold;
+}
+
+/* Um elemento com a classe "asterico", significando obrigatório */
+.asterico
+{
+  /* o texto é pintado com a cor vermelha */
+  color: red;
+  /* preencher o espaço interno esquerdo com 2 pixels */
+  padding-left: 2px;
+}
+
+/* Estilizar o botão */
+button
+{
+  background-color: brown;
+  border: 0px solid transparent;
+  border-radius: 5px;
+  color: whitesmoke;
+  display: block;
+  /* descartar o contorno externo da borda */
+  outline: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+

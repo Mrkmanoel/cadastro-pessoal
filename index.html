@@ -1,0 +1,91 @@
+<!-- Precisa informar ao navegador que tipo de documento e este -->
+<!DOCTYPE html>
+<!-- Precisa definir o idioma do documento para poder ser encontrado nos sites de pesquisa com filtro de idioma -->
+<html lang="pt-br">
+<!-- O elemento "head" é um container que armazena os metadados para informações do documento capturadas pelos sites de pesquisa -->
+<head>
+    <!-- Este metadado serve para renderizar os caracteres estrangeiros para que o navegador reconheça e renderize corretamente -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Este metadado serve para tornar o site compativel com todos os dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Exibir o título na aba do navegador -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Itaú - Formulário de Cadastro Pessoal</title>
+</head>
+<!-- Um corpo para estilizar os cabeçalhos de graus diferentes, os parágrafos, as imagens, etc. -->
+<body>
+    <!-- Uma divisao para centralizar e definir a alrgura porque as pessoas preferem olhar no centro da página ao invés de dois lados esquerdo e direito -->
+    <div class="container">
+
+        <!-- Um cabeçalho -->
+        <h1>Cadastro Pessoal</h1>
+        <!-- Parágrafos -->
+        <p>Damos as boas-vindas a você e pedimos que preencha este formulário.</p>
+        <p>É obrigatório.</p>
+
+        <!-- Um formulário
+              - action="sucesso.html" = encaminhamento da outra página ao submeter
+              - o método "get" funciona apenas em HTML puro, pois o método "post" funciona apenas nas linguagens back-end do servidor
+         -->
+        <form action="sucesso.html" method="get" id="formulario" onsubmit="enviarSubmeter()">
+
+            <!-- Um parágrafo para afastar o rótulo e o campo de entrada a fim de alinhar -->
+            <!-- Um rotulo com vinculador de campo de entrada  -->
+            <p><label for="nome">Nome completo<span class="asterico">*</span></label></p>
+            <!-- aria-label é um atributo importante para informar as pessoas com deficiência visual que o campo de entrada é requerido -->
+            <!-- Um campo de entrada com identificador de rotulo -->
+            <input type="text" name="nome" id="nome" required aria-required="true">
+
+            <p><label for="cpf">CPF<span class="asterico">*</span></label></p>
+            <input type="number" name="cpf" id="cpf" required aria-required="true">
+
+            <p><label for="rg">RG</label></p>
+            <input type="number" name="rg" id="rg" required aria-required="true">
+
+            <!-- Uma lista suspensa de opções -->
+            <p><label for="sexo">Sexo</label></p>
+            <select name="sexo" id="sexo">
+                <option value="branco">Selecione</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>
+
+            <p><label for="endereco">Endereço<span class="asterico">*</span></label></p>
+            <!-- Para que seja um endereco seja um texto, o tipo de campo de entrada deve ser texto -->
+            <input type="text" name="endereco" id="endereco" required aria-required="true">
+
+            <p><label for="numbero">Número<span class="asterico">*</span></label></p>
+            <input type="number" name="numero" id="numero" required aria-required="true">
+
+            <p><label for="bairro">Bairro</label></p>
+            <input type="text" name="bairro" id="bairro">
+
+            <p><label for="cidade">Cidade</label></p>
+            <input type="text" name="cidade" id="cidade" required aria-required="true">
+
+            <p><label for="estado">Estado</label></p>
+            <input type="text" name="estado" id="estado" required aria-required="true">
+
+            <p><label for="cep">CEP</label></p>
+            <!-- O atributo "pattern" e uma captura de expressão regular para checar se o CEP e valido
+                 O atributo "value", apesar de não ser bom para as pessoas com deficiência visual, e importante para exemplificar o formato correto de CEP
+            -->
+            <input type="text" id="cep" name="cep" pattern="\d{5}-?\d{3}" value="XXXXX-XXX">
+
+            <!-- O campo de entrada deve ter telefone como tipo, mas como queremos que insiramos os parênteses, preferemos o campo de entrada como texto -->
+            <p><label for="celular">Celular<span class="asterico">*</span></label></p>
+            <input type="text" id="celular" name="celular" value="(DD) XXXXX-XXXX" pattern="^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$" required aria-required="true"/>
+
+            <p><label for="telefone">Telefone</label></p>
+            <input type="text" id="telefone" name="telefone" value="(DD) XXXX-XXXX" pattern="^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$"/>
+
+            <button type="submit">Enviar</button>
+            
+        </form>
+
+    </div>
+
+    <script src="assets/js/global.js"></script>
+</body>
+</html>
