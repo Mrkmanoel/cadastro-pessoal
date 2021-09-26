@@ -25,9 +25,12 @@
         <p>É obrigatório.</p>
 
         <!-- Um formulário
+              - action="sucesso.html" = encaminhamento da outra página ao submeter
+              - o método "get" funciona apenas em HTML puro, pois o método "post" funciona apenas nas linguagens back-end do servidor
               - 'onsubmit="enviarSubmeter()"' é um evento que captura a função "enviarSubmeter()" do arquivo externo em JavaScript
+
          -->
-        <form id="formulario" onsubmit="enviarSubmeter()">
+        <form action="sucesso.html" method="GET" id="formulario" onsubmit="enviarSubmeter()">
 
             <!-- Um parágrafo para afastar o rótulo e o campo de entrada a fim de alinhar -->
             <!-- Um rotulo com vinculador de campo de entrada  -->
